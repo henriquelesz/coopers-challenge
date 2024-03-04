@@ -1,0 +1,23 @@
+@import "reset";
+@import "mixins";
+@import "variables";
+@import "header";
+@import "plan-card";
+@import "blog-card";
+@import "form";
+@import "main";
+@import "footer";
+
+.wrapper {
+  max-width: $wrapper;
+  margin-inline: auto;
+  @include responsivo(laptop) {
+    padding: 0 3%;
+  }
+  @include responsivo(tablet) {
+    padding: 0 3%;
+  }
+  @include responsivo(mobile) {
+    padding: 0 3%;
+  }
+}

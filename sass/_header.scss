@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0 1rem 0;
+  .custom-logo {
+    @include responsivo(mobile) {
+      padding-right: 10%;
+    }
+  }
+  nav {
+    a {
+      padding: 9px 35px 10px 40px;
+      background-color: $secundary-color;
+      font-family: "poppins";
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}

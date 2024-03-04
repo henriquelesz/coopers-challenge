@@ -1,0 +1,567 @@
+@charset "UTF-8";
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove estilo das listas sem classe */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0 1rem 0;
+}
+@media only screen and (max-width: 767px) {
+  header .custom-logo {
+    padding-right: 10%;
+  }
+}
+header nav a {
+  padding: 9px 35px 10px 40px;
+  background-color: #000;
+  font-family: "poppins";
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+}
+
+.card {
+  width: 380px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 40px 30px;
+  position: relative;
+}
+@media only screen and (max-width: 767px) {
+  .card {
+    width: 90%;
+  }
+}
+.card::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1.25rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #4AC959;
+}
+.card .card-top {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.5rem;
+  text-align: center;
+}
+.card .card-top span {
+  font-family: "poppins";
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+@media only screen and (max-width: 767px) {
+  .card .card-top span {
+    font-size: 2.2rem;
+  }
+}
+.card .card-top span::before {
+  content: "R$ ";
+}
+.card .card-top span::after {
+  content: " / mês";
+}
+.card .card-top h3 {
+  font-family: "montserrat";
+  font-size: clamp(1.25rem, 0.9304rem + 0.6667vw, 1.5rem);
+  font-weight: 500;
+}
+.card .card-top p {
+  font-family: "montserrat";
+  font-size: clamp(1.25rem, 0.9304rem + 0.6667vw, 1.5rem);
+  font-weight: 700;
+}
+.card .card-top .plan-features {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.8rem;
+  padding: 0;
+  margin: 2rem 0;
+  text-align: left;
+}
+.card .card-top .plan-features li {
+  font-family: "montserrat";
+  /*         font-size: 1.125rem; */
+  font-size: clamp(1rem, 0.8402rem + 0.3333vw, 1.125rem);
+  line-height: 24px;
+}
+.card .card-top .plan-features li::before {
+  content: url("../assets/icons/positive.svg");
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 1rem;
+}
+.card .card-button {
+  display: flex;
+  justify-content: center;
+}
+.card .card-button a {
+  background-color: #000;
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 1.125rem 0;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-family: "poppins";
+  /*       font-size: 1.5rem; */
+  font-size: clamp(1.125rem, 0.6456rem + 1vw, 1.5rem);
+  font-weight: 600;
+}
+
+.blog-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.blog-card img {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+.blog-card .blog-content {
+  padding: 1.5rem 1.875rem 1.5rem 1.875rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.blog-card .blog-content .blog-content-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.blog-card .blog-content .blog-content-top .post-categories {
+  display: flex;
+  gap: 10px;
+}
+.blog-card .blog-content .blog-content-top .post-categories a {
+  font-family: "montserrat";
+  /*           font-size: 1rem; */
+  font-size: clamp(0.875rem, 0.7152rem + 0.3333vw, 1rem);
+  font-weight: 400;
+  text-decoration: none;
+  color: #9499b3;
+  padding: 6px 12px;
+  border: 1px solid #9499b3;
+  border-radius: 3rem;
+}
+.blog-card .blog-content .blog-content-top h4 {
+  font-family: "montserrat";
+  font-weight: 500;
+  line-height: 120%;
+  /*         font-size: 1.25rem; */
+  font-size: clamp(1rem, 0.6804rem + 0.6667vw, 1.25rem);
+  color: #312f4f;
+}
+.blog-card .blog-content .blog-button {
+  font-family: "montserrat";
+  /*       font-size: 1rem; */
+  font-size: clamp(0.875rem, 0.7152rem + 0.3333vw, 1rem);
+  font-weight: 700;
+  color: #4AC959;
+  text-decoration: none;
+}
+
+#contact {
+  max-width: 700px;
+  margin-top: 186px;
+  padding: 128px 60px 64px 60px;
+  box-shadow: 0 40px 16px 0 rgba(6, 21, 43, 0.08);
+  border-radius: 4px;
+  position: relative;
+}
+#contact .form-img {
+  position: absolute;
+  top: -95.5px;
+  left: 50%;
+  translate: -50%;
+  z-index: 2;
+}
+#contact .green-bar {
+  position: absolute;
+  width: 166px;
+  height: 23px;
+  background: #4AC959;
+  top: -11.5px;
+  left: 50%;
+  translate: -125%;
+}
+#contact .form-title {
+  display: flex;
+  gap: 1.5rem;
+}
+#contact .form-title h3 {
+  font-family: "montserrat";
+  font-size: clamp(1.25rem, 0.9304rem + 0.6667vw, 1.5rem);
+  font-weight: 400;
+  color: #06152b;
+}
+#contact .form-title h3 span {
+  font-weight: 600;
+}
+
+form {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  form {
+    gap: 0.5rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  form {
+    gap: 0.5rem;
+  }
+}
+form label {
+  font-family: "montserrat";
+  font-size: clamp(0.875rem, 0.7152rem + 0.3333vw, 1rem);
+  color: #06152b;
+  line-height: 2rem;
+}
+form .col-2 {
+  display: flex;
+  gap: 20px;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  form .col-2 {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+@media only screen and (max-width: 767px) {
+  form .col-2 {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+form input[type=submit] {
+  width: 100%;
+  height: 52px;
+  font-family: "montserrat";
+  font-size: clamp(0.875rem, 0.7152rem + 0.3333vw, 1rem);
+  font-weight: 600;
+  background: #4AC959;
+  color: #fff;
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+textarea {
+  width: 100%;
+  border: 1px solid #06152b;
+  border-radius: 4px;
+  padding-left: 1rem;
+}
+input[type=text]::placeholder,
+input[type=email]::placeholder,
+input[type=tel]::placeholder,
+textarea::placeholder {
+  font-family: "montserrat";
+  font-size: clamp(0.875rem, 0.7152rem + 0.3333vw, 1rem);
+}
+
+input[type=text],
+input[type=email],
+input[type=tel] {
+  height: 50px;
+}
+
+textarea {
+  padding-top: 1rem;
+}
+
+body {
+  background-image: url(../assets/imgs/hero-bg\ OPT.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: auto;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  body {
+    background-size: 55%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  body {
+    background-image: none;
+  }
+}
+body main #hero {
+  min-height: 80dvh;
+}
+@media only screen and (min-width: 960px) and (max-width: 1366px) {
+  body main #hero {
+    min-height: 70dvh;
+  }
+}
+body main .hero-flex {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 767px) {
+  body main .hero-flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+body main .hero-flex div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+@media only screen and (max-width: 767px) {
+  body main .hero-flex div:nth-child(1) {
+    align-items: center;
+    padding: 6rem 0;
+  }
+}
+body main .hero-flex div:nth-child(1) h1 {
+  font-family: "montserrat";
+  font-size: clamp(3.125rem, 0.7281rem + 5vw, 5rem);
+  font-weight: 700;
+  line-height: 64px;
+}
+body main .hero-flex div:nth-child(1) h1 span {
+  font-size: clamp(2.4rem, 0.6742rem + 3.6vw, 3.75rem);
+  font-weight: 400;
+  color: #4AC959;
+}
+body main .hero-flex div:nth-child(1) p {
+  font-family: "montserrat";
+  font-size: clamp(1.25rem, 0.9304rem + 0.6667vw, 1.5rem);
+  font-weight: 600;
+  line-height: 24px;
+  padding: 10% 0 8% 0;
+}
+@media only screen and (max-width: 767px) {
+  body main .hero-flex div:nth-child(1) p {
+    padding: 6% 0 5% 0;
+  }
+}
+body main .hero-flex div:nth-child(1) a {
+  font-family: "montserrat";
+  font-size: clamp(1.25rem, 0.9304rem + 0.6667vw, 1.5rem);
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  background: #4AC959;
+  padding: 17px 36px 18px 32px;
+  border-radius: 10px;
+}
+body main .hero-flex div:nth-child(2) {
+  width: 50%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+@media only screen and (max-width: 767px) {
+  body main .hero-flex div:nth-child(2) {
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 3rem;
+  }
+}
+body main #to-do {
+  background: #000;
+  clip-path: polygon(0 25%, 100% 0, 100% 75%, 0% 100%);
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+body main #to-do h2 {
+  font-family: "poppins";
+  font-size: clamp(2.4rem, 0.6742rem + 3.6vw, 3.75rem);
+  font-weight: 600;
+  line-height: 60px;
+  color: #fff;
+  text-decoration: underline solid 4px #4AC959;
+  text-underline-offset: 1rem;
+}
+body main #to-do p {
+  max-width: 600px;
+  /*         width: 50%; */
+  font-family: "mulish";
+  font-size: clamp(1.25rem, 0.9304rem + 0.6667vw, 1.5rem);
+  text-align: center;
+  color: #fff;
+}
+body main #plans {
+  display: flex;
+  justify-content: center;
+  gap: 33px;
+  padding: 3rem 0;
+}
+@media only screen and (max-width: 767px) {
+  body main #plans {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+}
+body main #blog {
+  min-height: 672px;
+  position: relative;
+  padding: 80px 0 0 80px;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  body main #blog {
+    padding: 3rem;
+    background: #4AC959;
+    border-radius: 10px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  body main #blog {
+    padding: 3rem;
+    background: #4AC959;
+    border-radius: 10px;
+  }
+}
+body main #blog .blog {
+  position: relative;
+  z-index: 10;
+}
+body main #blog .blog h3 {
+  font-family: "montserrat";
+  font-size: clamp(2.43rem, 1.7014rem + 1.52vw, 3rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 46px;
+}
+body main #blog .blog .blog-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.8125rem;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  body main #blog .blog .blog-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 767px) {
+  body main #blog .blog .blog-container {
+    grid-template-columns: 1fr;
+  }
+}
+body main #blog .bg {
+  width: 90%;
+  min-height: 520px;
+  background: #4AC959;
+  border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  body main #blog .bg {
+    display: none;
+  }
+}
+@media only screen and (max-width: 767px) {
+  body main #blog .bg {
+    display: none;
+  }
+}
+
+footer {
+  height: 245px;
+  clip-path: polygon(0 13%, 100% 0, 100% 100%, 0% 100%);
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+footer div:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+footer div:nth-child(1) h4,
+footer div:nth-child(1) a {
+  font-family: "Poppins";
+  font-size: clamp(1.25rem, 0.9304rem + 0.6667vw, 1.5rem);
+  font-weight: 500;
+  text-decoration: none;
+  color: #fff;
+}
+footer div:nth-child(1) p {
+  font-family: "Poppins";
+  font-size: 14px;
+  color: #fff;
+}
+footer div:nth-child(2) {
+  height: 41px;
+  width: 511px;
+  clip-path: polygon(0 13%, 100% 0, 100% 100%, 0% 100%);
+  background: #4AC959;
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin-inline: auto;
+}
+@media only screen and (min-width: 960px) and (max-width: 1366px) {
+  .wrapper {
+    padding: 0 3%;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  .wrapper {
+    padding: 0 3%;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    padding: 0 3%;
+  }
+}/*# sourceMappingURL=style.css.map */

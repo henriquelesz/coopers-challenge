@@ -1,0 +1,172 @@
+body {
+  background-image: url(../assets/imgs/hero-bg\ OPT.png);
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: auto;
+  @include responsivo(tablet) {
+    background-size: 55%;
+  }
+  @include responsivo(mobile) {
+    background-image: none;
+  }
+  main {
+    #hero {
+      min-height: 80dvh;
+      @include responsivo(laptop) {
+        min-height: 70dvh;
+      }
+    }
+    .hero-flex {
+      display: flex;
+      justify-content: space-between;
+      @include responsivo(mobile) {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      div {
+        &:nth-child(1) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: start;
+          @include responsivo(mobile) {
+            align-items: center;
+            padding: 6rem 0;
+          }
+          h1 {
+            font-family: "montserrat";
+            font-size: clamp(3.125rem, 0.7281rem + 5vw, 5rem);
+            font-weight: 700;
+            line-height: 64px;
+            span {
+              font-size: clamp(2.4rem, 0.6742rem + 3.6vw, 3.75rem);
+              font-weight: 400;
+              color: $primary-color;
+            }
+          }
+          p {
+            font-family: "montserrat";
+            font-size: clamp(1.25rem, 0.9304rem + 0.6667vw, 1.5rem);
+            font-weight: 600;
+            line-height: 24px;
+            padding: 10% 0 8% 0;
+            @include responsivo(mobile) {
+              padding: 6% 0 5% 0;
+            }
+          }
+          a {
+            font-family: "montserrat";
+            font-size: clamp(1.25rem, 0.9304rem + 0.6667vw, 1.5rem);
+            font-weight: 600;
+            text-decoration: none;
+            color: #fff;
+            background: $primary-color;
+            padding: 17px 36px 18px 32px;
+            border-radius: 10px;
+          }
+        }
+        &:nth-child(2) {
+          width: 50%;
+          display: flex;
+          justify-content: end;
+          align-items: center;
+          @include responsivo(mobile) {
+            width: 100%;
+            justify-content: center;
+            padding-bottom: 3rem;
+          }
+        }
+      }
+    }
+    #to-do {
+      background: $secundary-color;
+      clip-path: polygon(0 25%, 100% 0, 100% 75%, 0% 100%);
+      padding: 10rem 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      h2 {
+        font-family: "poppins";
+        font-size: clamp(2.4rem, 0.6742rem + 3.6vw, 3.75rem);
+        font-weight: 600;
+        line-height: 60px;
+        color: #fff;
+        text-decoration: underline solid 4px $primary-color;
+        text-underline-offset: 1rem;
+      }
+      p {
+        max-width: 600px;
+        /*         width: 50%; */
+        font-family: "mulish";
+        font-size: clamp(1.25rem, 0.9304rem + 0.6667vw, 1.5rem);
+        text-align: center;
+        color: #fff;
+      }
+    }
+    #plans {
+      display: flex;
+      justify-content: center;
+      gap: 33px;
+      padding: 3rem 0;
+      @include responsivo(mobile) {
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+      }
+    }
+    #blog {
+      min-height: 672px;
+      position: relative;
+      padding: 80px 0 0 80px;
+      @include responsivo(tablet) {
+        padding: 3rem;
+        background: $primary-color;
+        border-radius: 10px;
+      }
+      @include responsivo(mobile) {
+        padding: 3rem;
+        background: $primary-color;
+        border-radius: 10px;
+      }
+      .blog {
+        position: relative;
+        z-index: 10;
+        h3 {
+          font-family: "montserrat";
+          font-size: clamp(2.43rem, 1.7014rem + 1.52vw, 3rem);
+          font-weight: 700;
+          color: #fff;
+          margin-bottom: 46px;
+        }
+        .blog-container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          @include responsivo(tablet) {
+            grid-template-columns: repeat(2, 1fr);
+          }
+          @include responsivo(mobile) {
+            grid-template-columns: 1fr;
+          }
+          gap: 0.8125rem;
+        }
+      }
+      .bg {
+        width: 90%;
+        min-height: 520px;
+        background: $primary-color;
+        border-radius: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include responsivo(tablet) {
+          display: none;
+        }
+        @include responsivo(mobile) {
+          display: none;
+        }
+      }
+    }
+  }
+}
